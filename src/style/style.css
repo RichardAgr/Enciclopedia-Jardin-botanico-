@@ -1,0 +1,120 @@
+:root {
+    --header-height: 56px;
+    --matiz: 152;
+    --colorPrimario: hsl(var(--matiz), 24%, 32%);
+    --colorPrimarioAlt: hsl(var(--matiz), 24%, 28%);
+    --colorPrimarioSuave: hsl(var(--matiz), 24%, 66%);
+    --colorPrimarioLigero: hsl(var(--matiz), 24%, 92%);
+    --colorTitulo: hsl(var(--matiz), 4%, 15%);
+    --colorTexto: hsl(var(--matiz), 4%, 35%);
+    --colorTextoSuave: hsl(var(--matiz),4%, 55%);
+    --colorBody: hsl(var(--matiz),0%,100%);
+    --colorContenedor: #FFF;
+
+    --fondoBody: 'Poppins', sans-serif;
+    --fondoTamanioGran:2rem;
+    --tamnioH1:1.5rem;
+    --tamnioH2:1.25rem;
+    --tamnioH3:1rem;
+    --fondoTamNormal:.938rem;
+    --fondoTamPerque:.813rem;
+    --fontdoTamMenor:.75rem;
+
+    --fondoMediano:500;
+    --fontSemiNegrilla:600;
+
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+
+    --infoHerramienta:10;
+    --fijo:100;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,button,input,textarea{
+    font-family: var(--fondoBody);
+    font-size: var(--fondoTamNormal);
+}
+
+body{
+    margin: var(--header-height) 0 0 0;
+    background-color: var(--colorBody);
+    color: var(--colorTexto);
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+h1,h2,h2{
+    color: var(--colorTitulo);
+    font-weight: var(--fontSemiNegrilla);
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.seccion{
+    padding: 5.5rem 0 1rem;
+}
+
+.tituloSeccion, .centroTituloSeccion{
+    font-size: var(--header-height);
+    margin-bottom: var(--mb-2);
+    line-height: 140%;
+}
+
+.centroTituloSeccion{
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid{
+    display: grid;
+}
+
+.main{
+    overflow: hidden;
+}
+
+@media screen and (min-width: 968px){
+    :root{
+        --fondoTamanioGran:3.5rem;
+        --tamnioH1:2.25rem;
+        --tamnioH2:1.5rem;
+        --tamnioH3:1.25rem;
+        --fondoTamNormal:1rem;
+        --fondoTamPerque:.875rem;
+        --fontdoTamMenor:.813rem;
+    }
+}
