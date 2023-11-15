@@ -4,7 +4,7 @@
 }
 body {
   font-family: Arial, sans-serif; 
-  background-color: #fbdcc4; 
+  background-color: #86B1A0; 
   padding: 0;
   margin: 0;
 }
@@ -15,7 +15,7 @@ form {
 
 
 .menu {
-  background-color: #7D0633; 
+  background-color: #4f4323; 
   color: rgb(255, 255, 255); 
   border: none; 
   border-radius: 10; 
@@ -24,7 +24,7 @@ form {
 }
 
 .header {
-  background-color: #7D0633; 
+  background-color: #4f4323; 
   color: rgb(144, 32, 32);   
   position: sticky;
   top: 0px;
@@ -63,5 +63,5 @@ form {
 display: flex;
 flex-direction: column;
 min-height: 100vh; 
-background-color: #fbdcc4;
+background-color: #86B1A0;
 }

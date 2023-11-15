@@ -1,16 +1,23 @@
 import React from 'react';
-import './App.css'
+import './App.css';
 
-import Header from './components/menuNavegacion/header'
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import Header from './components/MenuNavegacion/header'
+import MenuNav from './components/sprint2/NavNavegacion/headerNav'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
-      <div className="App">
-         <Header />
-         {/* <MenuNav />
-         <Footer />  */}
-      </div>
-  )
+    <Router>
+    <div className="App">
+        <Header />
+      <MenuNav />
+        <Footer />  
+    </div>
+     
+    </Router>
+  );
 }
 
-export default App
+export default App;
