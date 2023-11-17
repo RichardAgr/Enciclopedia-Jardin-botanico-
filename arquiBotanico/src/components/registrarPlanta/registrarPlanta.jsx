@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './registrarPlanta.css';
 
-/* const { Title } = Typography;
-
-const { TextArea } = Input; */
 
 function MyForm() {
   const [imageUploaded, setImageUploaded] = useState(false);
