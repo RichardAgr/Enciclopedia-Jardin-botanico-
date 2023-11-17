@@ -4,6 +4,7 @@ import './recipe.css';
 import { Button } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 /* import {ModalConfirmation} from '../../ModalConfirmation/ModalConfirmation'; */
+import { Eliminar } from '../eliminar/Eliminar';
 import { Link } from 'react-router-dom';
 import '../sprint2/NavNavegacion/headerNav.css'
 
@@ -41,7 +42,7 @@ console.log(platilloData.imagen)
                 </Button>
             </Link>
             </div>
-                    {/* <h1>Modal de confirmacion</h1> */}
+                    <Eliminar/>
           </div>
           </div>
         

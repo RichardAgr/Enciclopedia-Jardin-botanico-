@@ -193,10 +193,10 @@ const onFinish = async (values) => {
         wrapperCol={{ span: 21 }} // Offset para mover el botón
       >
         <div className='contBotones'>
-        <Button type="primary" htmlType="submit" className='button' style={{backgroundColor: '#7D0633' }}>
+        <Button type="primary" htmlType="submit" className='button' style={{backgroundColor: '#096c1b' }}>
           Registrar
         </Button>
-        <Button type="primary" htmlType="button" className='button' style={{backgroundColor: '#828282'}} onClick={showModal}>
+        <Button type="primary" htmlType="button" className='button' style={{backgroundColor: '#5a7a60'}} onClick={showModal}>
           Cancelar
         </Button>
         </div>
