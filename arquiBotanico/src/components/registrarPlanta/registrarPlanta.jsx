@@ -8,6 +8,37 @@ import './registrarPlanta.css';
 /* const { Title } = Typography;
 
 const { TextArea } = Input; */
+const AddProduct = ({ history }) => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState('');
+
+  const addProductHandler = async (e) => {
+    e.preventDefault();
+
+    try {
+      const formData = new FormData();
+
+      formData.append('imagen', image);
+      formData.append('titulo', title);
+      formData.append('descripcion', description);
+
+      // Haciendo la solicitud al server
+      const response = await axios.post('/api/products/addProduct', formData);
+
+      // Verificando la respuesta del servidor
+      if (response.status === 200) {
+        console.log('exito');
+      } else {
+        console.error('Error al agregar el producto:', response.data);
+      }
+    } catch (error) {
+      // Manejar errores generales
+      console.error('Error en la solicitud:', error);
+    }
+  };
+}
+
 
 function MyForm() {
   const [imageUploaded, setImageUploaded] = useState(false);
@@ -71,25 +102,24 @@ function MyForm() {
 const onFinish = async (values) => {
   console.log('Finaliza el formulario');
   console.log(values);
+  const formData = new FormData();
   try {
-    const formData = new FormData();
-    formData.append('nombre', values.titulo);
-    formData.append('descripcion', values.descripcion);
-
     // Obtén los archivos de imagen 
     const imagenFile = values.imagen.file;
 
-
+    formData.append('titulo', values.titulo);
     // Agrega los archivos al FormData con su nombre y tipo
     formData.append('imagen', new Blob([imagenFile], { type: imagenFile.type }), imagenFile.name);
     
+    
+    formData.append('descripcion', values.descripcion);
+
+    
+    
 
     console.log('Realizando llamada');
-    const response = await axios.post('http://18.116.106.247:3000/registrarPlanta', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-    });
+    const response = await axios.post('http://localhost:8080/api/products/addProduct', formData)
+
     console.log('Llega la llamada');
     console.log(response);
     if (response.status === 200) {
@@ -113,7 +143,7 @@ const onFinish = async (values) => {
     <div>
     <div className="titulo-formato">Registrar Planta</div  >
     <div className='formRegistrar'>
-    <Form onFinish={onFinish}>
+    <Form onFinish={onFinish} method="POST" encType='multipart/form-data'>
 
       <Form.Item className='componente-limite'
         label={ 
