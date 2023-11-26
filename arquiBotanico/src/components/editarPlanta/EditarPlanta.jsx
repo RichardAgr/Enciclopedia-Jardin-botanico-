@@ -3,11 +3,8 @@ import { UploadOutlined } from '@ant-design/icons';
 import React, { useEffect, useState } from 'react';
 import { Link} from 'react-router-dom';
 import axios from 'axios';
-import './editarPlanta.css';
 import { useParams } from 'react-router-dom';
-
-const { Title } = Typography;
-const { TextArea } = Input;
+import './editarPlanta.css';
 
 export const EditarPlanta = () =>{
   const [imageUploaded, setImageUploaded] = useState(false);

@@ -21,8 +21,8 @@
 
 .banner-contenedor-titulo{
   width: 100%;
-  font-size: 45px;
-  line-height: 40px;
+  font-size: 35px;
+  line-height: 30px;
   font-family: sans-serif;
   color: #333;
   height: 40px;
@@ -30,6 +30,7 @@
   margin: 0 auto;
   justify-content: center;
 }
+
 .banner-titulo{
   font-weight: 600;
   overflow: hidden;
@@ -37,12 +38,9 @@
   display: flex;
   align-items: center;
 }
-.banner-titulo:hover{
-  transform: scale(1.1);
-}
+
 .banner-descripcion{
   font-size: 1.2em;
-
   font-family: sans-serif;
   color: #242424;
   padding: 5px 0;
@@ -114,13 +112,24 @@
   
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   .banner-contenedor-titulo{
-      font-size: 36px;
+      font-size: 30px;
   }
-
 }
-@media only screen and (max-width: 769px) {
+
+@media only screen and (max-width: 980px) {
+  .banner-contenedor-titulo{
+    font-size: 32px;
+  }
+  .banner-descripcion{
+      font-size: 16px;
+  }
+  .banner{
+      width: 90%;
+  }
+}
+@media only screen and (max-width: 850px) {
   .banner-contenedor-titulo{
       font-size: 32px;
   }
@@ -131,7 +140,8 @@
       width: 90%;
   }
 }
-@media only screen and (max-width: 630px) {
+
+@media only screen and (max-width: 700px) {
   .banner{
       flex-direction: column;
   }
@@ -140,5 +150,35 @@
   }
   .banner-sticker{
       padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .banner-contenedor-titulo{
+    font-size: 20px;
+  }
+  .banner{
+      flex-direction: column;
+  }
+  .banner-descripcion{
+      font-size: 18px;
+  }
+  .banner-sticker{
+      padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .banner-contenedor-titulo{
+    font-size: 15px;
+  }
+  .banner{
+      flex-direction: column;
+  }
+  .banner-descripcion{
+      font-size: 14px;
+  }
+  .banner-sticker{
+      padding-bottom: 2rem;
   }
 }
