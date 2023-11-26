@@ -28,7 +28,7 @@ const App2 = () => {
           
           title={
               <span>          
-                 <UnorderedListOutlined /> Plantas Tradicionales
+                 <UnorderedListOutlined /> Plantas Medicinales
               </span>
             }
             >

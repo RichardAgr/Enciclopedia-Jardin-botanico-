@@ -15,7 +15,7 @@ function MenuItem({ image, name, id}) {
   }
   
 const classImagen = "menuItemImagen " + `${hoverTitulo ? "menuItemTituloHover" :""}`
-const urlImagen = 'http://18.116.106.247:3000/media/imagen/' + image.replace(/ /g, "%20")
+const urlImagen =/*  'http://18.116.106.247:3000/media/imagen/'  */+ image.replace(/ /g, "%20")
   return (
     <div className="menuItem">
       <Link to={`/mostrar-planta/page/${id}`} className='ItemContenedorImagen'>

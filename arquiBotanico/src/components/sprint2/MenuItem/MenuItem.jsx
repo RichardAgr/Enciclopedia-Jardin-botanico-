@@ -10,7 +10,7 @@ function MenuItem({ image, name, pagina, id}) {
   useEffect(() => {
     async function fetchPlantas() {
       try {
-        const response = await fetch(`http://18.116.106.247:3000/obtener_pagina/${pagina}`);
+        /* const response = await fetch(`url/obtener_pagina/${pagina}`); */
 
         if (response.ok) {
           const data = await response.json();
@@ -37,7 +37,7 @@ function MenuItem({ image, name, pagina, id}) {
   }
   
 const classImagen = "menuItemImagen " + `${hoverTitulo ? "menuItemTituloHover" :""}`
-const urlImagen = 'http://18.116.106.247:3000/media/imagen/' + image.replace(/ /g, "%20")
+const urlImagen =/*  'http://18.116.106.247:3000/media/imagen/'  */+ image.replace(/ /g, "%20")
   return (
     <div className="menuItem">
       <Link to={`/mostrar-planta/page/${pagid}`} className='ItemContenedorImagen'>

@@ -17,7 +17,7 @@ const MenuPlantas= () => {
     useEffect(() => {
       async function fetchPlantas() {
         try {
-          const response = await fetch(`http://18.116.106.247:3000/all`);
+          const response = await fetch(/* `http://18.116.106.247:3000/all` */);
           if (response.ok) {
             const data = await response.json();
             setPlantas(data.result);

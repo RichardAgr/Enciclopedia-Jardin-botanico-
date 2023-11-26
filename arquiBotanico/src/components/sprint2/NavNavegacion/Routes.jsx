@@ -5,18 +5,18 @@ import Menu from '../MenuPlantas/menuPlantas';
 import Home from '../../Home/BannerPresentacion/BannerPresentacion'
 
 import MyForm from '../../registrarPlanta/registrarPlanta';
-//import MostrarPlatillos from '../../MostrarPlatillos/mostrarPlatillos';
-//import EditarPlatillos from '../../EditarPlatillo/EditarPlatillo'
+import MostrarPlanta from '../../mostrarPlanta/MostrarPlanta';
+import EditarPlanta from '../../editarPlanta/EditarPlanta';
+
 
 function Router() {
     return (
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/registrar-planta' element={<MyForm/>}/>
-{/*             <Route path='/menu-platillos' element={<Menu/>}/>
-            <Route path='/registrar-platillo' element={<MyForm/>}/>
-            <Route path='/mostrar-platillo/page/:id' element={<MostrarPlatillos/>}/>
-            <Route path='/editar-platillo/:id' element={<EditarPlatillos/>}/> */}
+            <Route path='/mostrar-planta/page/:id' element={<MostrarPlanta/>}/>
+            <Route path='/editar-planta/:id' element={<EditarPlanta/>}/>
+           <Route path='/menu-plantas' element={<Menu/>}/>
         </Routes>
     );
 }
