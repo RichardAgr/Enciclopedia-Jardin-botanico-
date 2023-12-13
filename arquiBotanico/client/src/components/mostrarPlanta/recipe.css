@@ -57,8 +57,8 @@
   
   
   
-  .edit-button:hover,
-  .delete-button:hover {
+  .buttonEliminar:hover {
+    color: #fff;
     background-color: #bd0707;
   }
   

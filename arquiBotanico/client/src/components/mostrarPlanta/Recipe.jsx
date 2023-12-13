@@ -52,7 +52,7 @@ const Recipe = () => {
               </Link>
             </div>
             {/* Agregar el componente de Eliminar aquí si es necesario */}
-            <Button type="danger" onClick={() => handleDelete(id)}>
+            <Button className='buttonEliminar' type="danger" onClick={() => handleDelete(id)}>
               <DeleteOutlined />
               Eliminar
             </Button>
