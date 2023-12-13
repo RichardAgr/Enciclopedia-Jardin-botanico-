@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Button } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
@@ -22,7 +22,7 @@ const Recipe = () => {
         setProductDescription(data.descripcion);
         setProductImage(data.imagen);
       } catch (error) {
-        console.error('Error al obtener datos del producto:', error);
+        console.error('Error al obtener datos de la planta:', error);
       }
     };
 
@@ -45,14 +45,14 @@ const Recipe = () => {
           <div className="recipe-buttons">
             <div className="buttonn">
               <Link to={`/editar-planta/${id}`}>
-                <Button type="primary">
+                <Button className='buttonEditar' type="primary">
                   <EditOutlined />
                   Editar
                 </Button>
               </Link>
             </div>
             {/* Agregar el componente de Eliminar aquí si es necesario */}
-            <Button type="danger" onClick={() => handleDelete(id)}>
+            <Button className='buttonEliminar' type="danger" onClick={() => handleDelete(id)}>
               <DeleteOutlined />
               Eliminar
             </Button>
