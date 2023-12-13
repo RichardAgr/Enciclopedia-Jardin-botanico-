@@ -45,7 +45,7 @@ const Recipe = () => {
           <div className="recipe-buttons">
             <div className="buttonn">
               <Link to={`/editar-planta/${id}`}>
-                <Button type="primary">
+                <Button className='buttonEditar' type="primary">
                   <EditOutlined />
                   Editar
                 </Button>
