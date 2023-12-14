@@ -1,11 +1,13 @@
 // dbConfig.js
 import { Sequelize } from 'sequelize';
+import {db_HOST,db_NAME,db_PASSWORD,db_USER,db_PORT} from '../src/config.js'
 const dbConfig = {
-    HOST: 'localhost',
-    USER: 'root',
-    PASSWORD: '1234',
-    DB: 'jardin',
+    HOST: db_HOST,
+    USER: db_USER,
+    PASSWORD: db_PASSWORD,
+    DB: db_NAME,
     dialect: 'mysql',
+    port:db_PORT,
     
     pool: {
         max: 5,

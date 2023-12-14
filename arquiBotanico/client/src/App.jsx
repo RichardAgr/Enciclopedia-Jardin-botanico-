@@ -8,14 +8,21 @@ import MenuNav from './components/sprint2/NavNavegacion/headerNav'
 import Footer from './components/footer/Footer'
 import ListaPlantas from './components/sprint2/MenuPlantas/menuPlantas'
 import Login from './components/Login/login'
+import Inicio from './components/Login/inicioSesion'
 function App() {
   return (
     <Router>
     <div className="App">
-         <Header />
+        <Header />
       <MenuNav />
    
-        <Footer />  
+        <Footer /> 
+        {/*
+        <Login/>
+        <Inicio/>
+        */}  
+      
+      
         
      
     </div>

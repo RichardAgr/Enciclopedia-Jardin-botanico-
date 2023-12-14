@@ -1,6 +1,7 @@
 import dbConfig from '../config/dbConfig.js';
 import { Sequelize, DataTypes } from 'sequelize';
 import defineProductModel from './productModel.js';
+import defineUserModel from './userModel.js';
 
 //Configuracion de nuestra base de datos
 export const sequelize = new Sequelize(
@@ -36,7 +37,8 @@ db.Sequelize = Sequelize
 db.sequelize = sequelize
 const Product = defineProductModel(sequelize);
 db.products = defineProductModel(sequelize, DataTypes);
-
+const User = defineUserModel(sequelize);
+db.users = User;
 
 //Sincroniza la base de datos
 db.sequelize.sync({ force: false })
