@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom';
 import './editarPlanta.css';
 
 export const EditarPlanta = () =>{
+  const { id } = useParams()
+  console.log(id);
   const [imageUploaded, setImageUploaded] = useState(false);
   const [text, setText] = useState('');
   const [text2, setText2] = useState('');
@@ -21,7 +23,6 @@ export const EditarPlanta = () =>{
   const [nombreImagen,setNombreImagen] = useState("");
   const [datoImagen,setDatoImagen] = useState(null);
   const [idPlanta,setIdPlanta] = useState("");
-  const {id} = useParams(); //Obtengo el id con el useParams
   const [keyImagen,setKeyImagen] = useState(false);
   const [plantaData, setPlantaData] = useState({
     nombre: '',
@@ -37,7 +38,7 @@ export const EditarPlanta = () =>{
     setBandDescripcion(false); //Bandera que me ayudan a evitar que me pidan de entrada descripcion cuando este ya esta definido por default
     //Obtengo el planta con el id indicado
 
-    axios.get(`${id}`)
+    axios.get(`http://localhost:3000/jardinBotanico/${id}`)
       .then((response) => {
         console.log(response.data.respuesta);
         const planta = response.data.respuesta;

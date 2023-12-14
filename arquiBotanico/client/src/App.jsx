@@ -7,15 +7,17 @@ import Header from './components/MenuNavegacion/header'
 import MenuNav from './components/sprint2/NavNavegacion/headerNav'
 import Footer from './components/footer/Footer'
 import ListaPlantas from './components/sprint2/MenuPlantas/menuPlantas'
+import Login from './components/Login/login'
 function App() {
   return (
     <Router>
     <div className="App">
-        <Header />
+         <Header />
       <MenuNav />
    
         <Footer />  
         
+     
     </div>
      
     </Router>
