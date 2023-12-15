@@ -5,7 +5,6 @@ import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../sprint2/NavNavegacion/headerNav.css';
-
 const Recipe = () => {
   const { id } = useParams();
   const [titulo, setTitle] = useState('');
@@ -32,7 +31,9 @@ const Recipe = () => {
   // Resto del código para renderizar la página y manejar acciones (editar, eliminar)...
 
   return (
+    
    <div className="reciForma">
+      
       <h2 className="formato-titulo">{titulo}</h2>
       <div className="recipe-content">
         <div className="recipe-content-header">

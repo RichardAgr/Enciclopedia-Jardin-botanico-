@@ -5,6 +5,8 @@ import { Link} from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './editarPlanta.css';
+import Header from '../menuNavegacion/header'
+import MenuNav from '../sprint2/NavNavegacion/headerNav'
 
 export const EditarPlanta = () =>{
   const { id } = useParams()
@@ -161,11 +163,18 @@ const onFinish = async (values) => {
   }else{
     message.error(`Verifique que todo los datos esten correctos`);
   }
+
+   const handleDelete = async (id) => {
+        await axios.delete(`/api/products/${id}`)
+        history.push('/productos')
+    }
 };
 
 
   return (
     <div>
+    <Header/>
+    <MenuNav/>
     <div className="titulo-formato" style={{ marginBottom: '30px' }}>Editar Planta</div  >
     <div className='form-contenedor'>
     {isLoading  &&  <Spin size='large' className='antspin'/>}
@@ -284,7 +293,7 @@ const onFinish = async (values) => {
         closable={false}
         onCancel={() => setCancelModalVisible(false)} 
         footer={[
-          <Link to={`/mostrar-planta/page/${id}`} key="cancel" onClick={() => setModalEditar(false)}>
+          <Link to={`/admin/mostrar-planta/page/${id}`} key="cancel" onClick={() => setModalEditar(false)}>
             <Button key="ok" className='button-link' onClick={() => setCancelModalVisible(false)}>
             Si
           </Button>,
@@ -301,7 +310,7 @@ const onFinish = async (values) => {
         visible={cancelModalVisible}
         onCancel={() => setCancelModalVisible(false)}
         footer={[
-          <Link to={`/mostrar-planta/page/${id}`} key="cancel" onClick={() => setCancelModalVisible(false)}>
+          <Link to={`/admin/mostrar-planta/page/${id}`} key="cancel" onClick={() => setCancelModalVisible(false)}>
            <Button key="ok" className='button-link' onClick={() => setCancelModalVisible(false)}>
           Ok
           </Button>,

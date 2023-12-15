@@ -1,16 +1,28 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
 import { Button } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../sprint2/NavNavegacion/headerNav.css';
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router'
 
 const Recipe = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [titulo, setTitle] = useState('');
   const [productDescription, setProductDescription] = useState('');
   const [productImage, setProductImage] = useState('');
+  
+  const EliminarComponente = (id) => {
+      axios.delete(`http://localhost:3000/jardinBotanico/${id}`)
+      navigate('/admin');
+        
+    
+  
+     
+    
+  }
 
   useEffect(() => {
     const getSingleProductData = async () => {
@@ -26,8 +38,11 @@ const Recipe = () => {
       }
     };
 
+    
+
     getSingleProductData();
   }, [id]);
+  
 
   // Resto del código para renderizar la página y manejar acciones (editar, eliminar)...
 
@@ -44,7 +59,7 @@ const Recipe = () => {
           </div>
           <div className="recipe-buttons">
             <div className="buttonn">
-              <Link to={`/editar-planta/${id}`}>
+              <Link to={`/admin/editar-planta/page/${id}`}>
                 <Button className='buttonEditar' type="primary">
                   <EditOutlined />
                   Editar
@@ -52,7 +67,7 @@ const Recipe = () => {
               </Link>
             </div>
             {/* Agregar el componente de Eliminar aquí si es necesario */}
-            <Button className='buttonEliminar' type="danger" onClick={() => handleDelete(id)}>
+            <Button className='buttonEliminar' type="danger" onClick={() => EliminarComponente(id)}>
               <DeleteOutlined />
               Eliminar
             </Button>

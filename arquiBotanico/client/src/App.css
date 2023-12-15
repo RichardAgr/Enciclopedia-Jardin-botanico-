@@ -9,13 +9,13 @@ body {
   margin: 0;
 }
 form {
-  background-color: #fbdcc4;
+  background-color: #13822f;
   padding: 20px; 
 }
 
 
 .menu {
-  background-color: #4f4323; 
+  background-color: #a2b5a8; 
   color: rgb(255, 255, 255); 
   border: none; 
   border-radius: 10; 
@@ -24,9 +24,9 @@ form {
 }
 
 .header {
-  background-color: #4f4323; 
+  background-color: rgb(35, 84, 12); 
   color: rgb(144, 32, 32);   
-  position: sticky;
+  position: relative;
   top: 0px;
   z-index: 99;
 }

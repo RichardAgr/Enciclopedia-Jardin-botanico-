@@ -2,9 +2,13 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import './login.css'; // Asegúrate de importar tus estilos
+import './login.css'; 
+import Header from '../../vista-cliente/MenuNavegacion/header';
+import MenuNav from '../../vista-cliente/sprint2/NavNavegacion/headerNav';
+import { useNavigate } from 'react-router-dom';
 
 const UserRegistration = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -25,7 +29,7 @@ const UserRegistration = () => {
     axios.post('http://localhost:3000/jardinBotanico/agregar-usuario', formData)
       .then(response => {
         console.log('Usuario registrado exitosamente:', response.data);
-        // Puedes redirigir al usuario a otra página o realizar otras acciones después del registro
+        navigate('/');
       })
       .catch(error => {
         console.error('Error al registrar el usuario:', error);
@@ -34,6 +38,8 @@ const UserRegistration = () => {
 
   return (
     <div className="registration-container">
+      <Header/>
+      <MenuNav/>
       <h1>Registro de Usuario</h1>
       <form className="registration-form" onSubmit={handleSubmit}>
         <label className="form-label">

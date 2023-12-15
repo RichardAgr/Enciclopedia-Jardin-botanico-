@@ -1,59 +1,46 @@
-import React, { useState } from 'react';
-import { Layout, Menu} from 'antd';
-import { HomeOutlined, UnorderedListOutlined, SearchOutlined, MenuOutlined } from '@ant-design/icons'; // Importa los íconos necesarios
-import { Link} from 'react-router-dom';
-import Routes from './Routes';
-import './headerNav.css'
-import { Content } from 'antd/es/layout/layout';
+import React from 'react';
+import { Layout, Menu } from 'antd';
+import { HomeOutlined, UnorderedListOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
+import './headerNav.css';
 
-const { Header, Footer } = Layout;
+const { Header } = Layout;
 const { SubMenu } = Menu;
 
 const App2 = () => {
   return (
     <Layout className="layout">
-      <Header div className="header" >
-
+      <Header className="header">
         <Menu theme="none" mode="horizontal" className='menu'>
-        <div className='alMedio'>
-          <Menu.Item key="Home" className={`${location.pathname === '/' ? 'selected-menu-item' : ''} ${'menu'}`} > 
-          <div className='alMedio'>
-            <Link to="/" className='menu-icon'>
+          <Menu.Item key="Home" className={`${location.pathname === '/admin/' ? 'selected-menu-item' : ''} ${'menu'}`}>
+            <Link to="/admin" className='menu-icon'>
               <HomeOutlined /> Inicio
-            </Link> 
-            </div>
-          </Menu.Item>     
-          
+            </Link>
+          </Menu.Item>
+
           <SubMenu theme='dark' className='menu-icon'
-          
-          title={
-              <span>          
-                 <UnorderedListOutlined /> Plantas Medicinales
+            title={
+              <span>
+                <UnorderedListOutlined /> Plantas Medicinales
               </span>
             }
-            >
-            <Menu.Item key="Registrar Planta" className={location.pathname === '/registrar-planta' ? 'selected-menu-item' : ''}>
-   
-              <Link to="/registrar-planta" className={`${'menu-icon'} ${'prueba'}`}>
+          >
+            <Menu.Item key="Registrar Planta" className={location.pathname === '/admin/registrarPlanta' ? 'selected-menu-item' : ''}>
+              <Link to="/admin/registrarPlanta" className={`${'menu-icon'} ${'prueba'}`}>
                 Registrar Planta
-              </Link> 
-         
+              </Link>
             </Menu.Item>
-            <Menu.Item key="Mostrar Planta" className={location.pathname === '/mostrar-planta/page/1' ? 'selected-menu-item' : ''}>
-              <Link to="/mostrar-planta/page/1" className={`${'menu-icon'} ${'prueba'}`}>
-                Mostrar Planta
-              </Link> 
+          </SubMenu>
+
+          {/* Agrega el botón de Logout */}
+          <Menu.Item key="Logout" className={location.pathname === '/' ? 'selected-menu-item' : ''}>
+              <Link to="/" className={`${'menu-icon'} ${'prueba'}`}>
+                Salir
+              </Link>
             </Menu.Item>
-            </SubMenu>
-          </div>
-          
         </Menu>
       </Header>
-          <Content className='content'>
-        <Routes/>
-      </Content>
     </Layout>
-    
   );
 };
 

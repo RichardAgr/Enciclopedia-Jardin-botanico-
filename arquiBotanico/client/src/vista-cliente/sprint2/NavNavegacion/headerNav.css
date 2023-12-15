@@ -1,11 +1,7 @@
 .selected-menu-item {
-  background-color: hsl(308, 41%, 26%) !important;
-  color: #f4f4f4 !important;
+  background-color: hsl(309, 48%, 13%) !important;
+  color: #fff !important;
 }
-.header{
-    position: relative;
-}
-
 
 .submenu-platillos {
   background-color: #173111 !important;
@@ -16,10 +12,7 @@
   color: #fff !important;
 
 }
-.menu-item-selected {
-  background-color: #333; /* Puedes cambiar esto al color oscuro que desees */
-  border-bottom: 2px solid #19456f; /* Puedes cambiar esto al color de resaltado que desees */
-}
+
 .menu-search-container {
   width: 50%;
   display: flex;
@@ -29,7 +22,6 @@
 .white-text {
   color: white;
 }
-
 
 body {
   display: flex;

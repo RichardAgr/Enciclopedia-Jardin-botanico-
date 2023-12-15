@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import Header from '../../vista-cliente/MenuNavegacion/header';
+import MenuNav from '../../vista-cliente/sprint2/NavNavegacion/headerNav';
+import { useNavigate } from 'react-router-dom';
+import './login.css';
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -20,7 +24,7 @@ const Login = () => {
     axios.post('http://localhost:3000/jardinBotanico/inicio-sesion', formData)
       .then(response => {
         console.log('Inicio de sesión exitoso:', response.data);
-        
+        navigate('/admin');
 
       })
       .catch(error => {
@@ -30,6 +34,9 @@ const Login = () => {
 
   return (
     <div>
+      <Header />
+      <MenuNav />
+        
       <h1>Iniciar Sesión</h1>
       <form onSubmit={handleSubmit}>
         <label>

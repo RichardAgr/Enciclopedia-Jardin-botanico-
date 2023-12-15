@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './registrarPlanta.css';
+import Header from '../menuNavegacion/header'
+import MenuNav from '../sprint2/NavNavegacion/headerNav'
+
 
 /* const { Title } = Typography;
 
@@ -141,6 +144,8 @@ const onFinish = async (values) => {
 
   return (
     <div>
+      <Header/>
+      <MenuNav/>
     <div className="titulo-formato">Registrar Planta</div  >
     <div className='formRegistrar'>
     <Form onFinish={onFinish} method="POST" encType='multipart/form-data'>

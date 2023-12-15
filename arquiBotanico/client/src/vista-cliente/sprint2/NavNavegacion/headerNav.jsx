@@ -2,9 +2,7 @@ import React from 'react';
 import { Layout, Menu, Row, Col } from 'antd';
 import { HomeOutlined, MenuOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-import Routes from './Routes';
 import './headerNav.css';
-import { Content } from 'antd/es/layout/layout';
 
 const { Header } = Layout;
 const { SubMenu } = Menu;
@@ -26,16 +24,16 @@ const App2 = () => {
           <Col>
             <Menu theme="dark" mode="horizontal">
               <SubMenu key="InicioSesion" icon={<MenuOutlined />} title="Inicio de Sesión">
-               <Menu.Item key="Iniciar Sesion" className={location.pathname === '/iniciar-sesion' ? 'selected-menu-item' : ''}>
+               <Menu.Item key="Iniciar Sesion" className={location.pathname === '/inicio' ? 'selected-menu-item' : ''}>
    
-                <Link to="/iniciar-sesion" className={`${'menu-icon'} ${'prueba'}`}>
+                <Link to="/inicio" className={`${'menu-icon'} ${'prueba'}`}>
                     Inicio Sesion
                 </Link> 
           
               </Menu.Item>
-              <Menu.Item key="Registrarte" className={location.pathname === '/registrarse' ? 'selected-menu-item' : ''}>
+              <Menu.Item key="Registrarte" className={location.pathname === '/login' ? 'selected-menu-item' : ''}>
    
-                <Link to="/registrarse" className={`${'menu-icon'} ${'prueba'}`}>
+                <Link to="/login" className={`${'menu-icon'} ${'prueba'}`}>
                     Registrarte
                 </Link> 
           
@@ -46,9 +44,7 @@ const App2 = () => {
         </Row>
       </Header>
 
-      <Content className='content'>
-        <Routes />
-      </Content>
+      
     </Layout>
   );
 };
