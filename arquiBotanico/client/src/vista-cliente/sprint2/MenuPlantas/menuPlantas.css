@@ -1,4 +1,10 @@
-
+h1{
+  text-align: center;
+}
+.container{
+  margin: 0.5cm;
+  
+}
 .estilo-buttonMenu{
     position: absolute  ;
     width: 20%;

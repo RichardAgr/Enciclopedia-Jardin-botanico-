@@ -42,8 +42,9 @@ const loginUser = async (req, res) => {
     }else{
       if (user.isAdmin == true){
       //Aquí podrías generar un token JWT y enviarlo como respuesta para gestionar la sesión
-
          res.status(200).send('Inicio de sesión exitoso');
+        }else{
+          return res.status(401).json({ error: 'Acceso denegado' });
         }
       }
   } catch (error) {

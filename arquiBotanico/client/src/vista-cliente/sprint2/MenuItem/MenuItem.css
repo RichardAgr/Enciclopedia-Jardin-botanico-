@@ -41,10 +41,11 @@
 }
 
 .menuItem.customClass button {
-  margin-top: 10px; /* Ajusta el margen superior del botón según tus necesidades */
+  margin-top: 1px; /* Ajusta el margen superior del botón según tus necesidades */
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
+
 .menuItem:last-child {
   margin-right: 0; /* Elimina el espacio derecho para el último elemento */
 }

@@ -1,48 +1,17 @@
-.selected-menu-item {
-  background-color: hsl(309, 48%, 13%) !important;
-  color: #fff !important;
+.Header {
+  background-color: #00ff00; /* Color verde de ejemplo */
 }
 
-.submenu-platillos {
-  background-color: #173111 !important;
-  color: #fff !important;
+.menu {
+  border-bottom: none; /* Eliminar borde inferior */
 }
 
 .menu-icon {
-  color: #fff !important;
-
+  color: #ffffff; /* Color del ícono */
 }
 
-.menu-search-container {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  margin-left: auto; /* Empuja el Input.Search al lado derecho del menú */
-}
-.white-text {
-  color: white;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content {
-  flex: 1;
-  background-color: #86B1A0;
-  padding: 30px;
-}
-
-.uno{
-  left: 95%;
-}
-.menu-button {
-  display: none; /* Ocultar el botón en pantallas grandes */
-}
-.menu-open {
-  display: block; /* Mostrar el menú desplegable en pantallas pequeñas */
+.selected-menu-item {
+  background-color: #f9f9f9; /* Color de fondo cuando el elemento está seleccionado */
 }
 
 /*PARTE RESPONSIVE*/

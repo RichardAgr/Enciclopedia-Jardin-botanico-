@@ -13,9 +13,9 @@ const App2 = () => {
       <Header className="header">
         <Row justify="space-between" align="middle">
           <Col>
-            <Menu theme="dark" mode="horizontal" className='menu'>
+            <Menu theme="dark" mode="horizontal">
               <Menu.Item key="Home">
-                <Link to="/" className='menu-icon'>
+                <Link to="/" className="menu-icon">
                   <HomeOutlined /> Inicio
                 </Link>
               </Menu.Item>
@@ -24,27 +24,21 @@ const App2 = () => {
           <Col>
             <Menu theme="dark" mode="horizontal">
               <SubMenu key="InicioSesion" icon={<MenuOutlined />} title="Inicio de Sesión">
-               <Menu.Item key="Iniciar Sesion" className={location.pathname === '/inicio' ? 'selected-menu-item' : ''}>
-   
-                <Link to="/inicio" className={`${'menu-icon'} ${'prueba'}`}>
+                <Menu.Item key="Iniciar Sesion" className={location.pathname === '/inicio' ? 'selected-menu-item' : ''}>
+                  <Link to="/inicio" className={`${'menu-icon'} ${'prueba'}`}>
                     Inicio Sesion
-                </Link> 
-          
-              </Menu.Item>
-              <Menu.Item key="Registrarte" className={location.pathname === '/login' ? 'selected-menu-item' : ''}>
-   
-                <Link to="/login" className={`${'menu-icon'} ${'prueba'}`}>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item key="Registrarte" className={location.pathname === '/login' ? 'selected-menu-item' : ''}>
+                  <Link to="/login" className={`${'menu-icon'} ${'prueba'}`}>
                     Registrarte
-                </Link> 
-          
-              </Menu.Item>
+                  </Link>
+                </Menu.Item>
               </SubMenu>
             </Menu>
           </Col>
         </Row>
       </Header>
-
-      
     </Layout>
   );
 };

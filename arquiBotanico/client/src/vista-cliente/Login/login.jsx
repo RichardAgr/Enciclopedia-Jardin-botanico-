@@ -1,5 +1,5 @@
 // UserRegistration.js
-
+import { message } from 'antd';
 import React, { useState } from 'react';
 import axios from 'axios';
 import './login.css'; 
@@ -24,15 +24,20 @@ const UserRegistration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (!formData.nombre || !formData.email || !formData.password) {
+      message.error('Por favor, complete todos los campos.');
+      return;
+    }
     // Realiza una solicitud para registrar el nuevo usuario
     axios.post('http://localhost:3000/jardinBotanico/agregar-usuario', formData)
       .then(response => {
-        console.log('Usuario registrado exitosamente:', response.data);
+        
         navigate('/');
+        console.log('Usuario registrado exitosamente:', response.data);
+        
       })
       .catch(error => {
-        console.error('Error al registrar el usuario:', error);
+        console.log('Usuario registrado no exitosamente:', response.data);
       });
   };
 

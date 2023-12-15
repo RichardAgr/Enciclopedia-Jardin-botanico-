@@ -8,6 +8,7 @@ function MenuItem({ product }) {
     <div className="menuItem customClass">
       <Card.Img src={`http://localhost:3000/${product.imagen}`} />
       <Card.Body>
+        <hr />
         <Card.Title>Titulo: {product.titulo}</Card.Title>
         <Card.Text>
           Descripcion: {product.descripcion.slice(0, 10)}...

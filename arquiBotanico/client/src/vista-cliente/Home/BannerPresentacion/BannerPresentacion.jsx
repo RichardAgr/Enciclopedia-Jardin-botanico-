@@ -8,7 +8,7 @@ const BannerPresentacion = () => {
   return (
     <>
         <div className='banner'>
-        <img className='banner-sticker' src="/src/assets/secuoya.ico" alt="sticker" />
+        <img  src="/src/assets/jardinBotanico.png" alt="sticker" />
         <div className='banner-contenido '>
           <div className='banner-contenedor-titulo'>
             <div className='banner-titulo'>

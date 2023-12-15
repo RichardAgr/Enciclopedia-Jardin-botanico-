@@ -1,8 +1,13 @@
+img{
+  width: 300%;
+  height: 300%;
+}
+
 .banner{
   display: flex;
   align-items: center;
   text-align: center;
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   padding: 2rem 0;
   font-family: sans-serif;

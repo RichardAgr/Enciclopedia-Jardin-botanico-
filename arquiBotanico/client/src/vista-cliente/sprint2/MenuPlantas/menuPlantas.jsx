@@ -30,6 +30,7 @@ const MenuPlantas = () => {
             ))}
         </div>
     </Container>
+  
   );
 };
 

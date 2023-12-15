@@ -1,22 +1,37 @@
 /* Login.css */
-
+.white-container {
+  padding: 20px; /* Ajusta el relleno según tus necesidades */
+}
+.registraiton-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+form{
+  margin: 5cm;
+}
 
-.login-form {
+.registration-form {
+  margin-top: 1cm;
+  margin-left: 15cm;
   max-width: 300px;
+  background-color: #ffffff;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 5px;
+  text-align: center;
 }
 
 .form-label {
   display: block;
-  margin-top: 10px;
+  
 }
 
 .form-input {

@@ -8,28 +8,6 @@ body {
   padding: 0;
   margin: 0;
 }
-form {
-  background-color: #13822f;
-  padding: 20px; 
-}
-
-
-.menu {
-  background-color: #a2b5a8; 
-  color: rgb(255, 255, 255); 
-  border: none; 
-  border-radius: 10; 
-  margin: 0; 
-  padding: 10; 
-}
-
-.header {
-  background-color: rgb(35, 84, 12); 
-  color: rgb(144, 32, 32);   
-  position: relative;
-  top: 0px;
-  z-index: 99;
-}
 
 .footer {
   font-family: Arial, sans-serif;
@@ -43,21 +21,7 @@ form {
   height: 30px;line-height: 30px;
 }
 
-.footeqqr{
-  font-family: Arial, sans-serif;
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px; 
-  background-color: #31112C; 
-  border-top: 1px solid #ffffff;
-  text-align: center;
 
-  font-size: 14px; 
-  color: #fffdfd; 
-  line-height: 2px;
-}
 
 .App {
 display: flex;
