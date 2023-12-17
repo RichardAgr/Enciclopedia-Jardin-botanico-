@@ -18,7 +18,7 @@ const MenuPlantas = () => {
 
   return (
     <Container className="justify-content-center p-2">
-      <h1 className='text-al'>Mostrando todas las plantas</h1>
+      <h1 className='text-al'>Plantas del jardin botanico Martin Cardenas</h1>
       <hr />
         <div className="plantas-container">
             {products.map((product) => (
