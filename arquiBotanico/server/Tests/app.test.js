@@ -15,7 +15,6 @@ describe('Test', () => {
       test('Deberia encontrar imagenes estaticas', async () => {
         const response = await request(app).get('/Images/1701989972610.jpg');
         expect(response.status).toBe(200);
-        // Agrega más expectativas según tu escenario específico
       });
       test('Debería devolver 404 para una ruta inexistente', async () => {
         const response = await request(app).get('/EstaRutaNoExiste');

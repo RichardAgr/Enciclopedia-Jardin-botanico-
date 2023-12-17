@@ -26,7 +26,7 @@ describe('Pruebas para el controlador de usuarios', () => {
       afterAll(async () => {
         await sequelize.close();
       });
-  test('Debería agregar un usuario correctamente', async () => {
+  test('Debería agregar un usuario correctamente ', async () => {
     const response = await request(app)
       .post('/addUser')
       .send({ nombre: 'UsuarioPrueba', email: 'test@example.com', password: 'password123' });
@@ -43,7 +43,6 @@ describe('Pruebas para el controlador de usuarios', () => {
     expect(response.statusCode).toBe(200);
 
   });
-
-
+  
 
 });

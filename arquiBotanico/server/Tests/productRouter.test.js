@@ -46,8 +46,20 @@ describe('Pruebas para las rutas de productos', () => {
     const response = await request(app).get('/jardinBotanico/agregar-usuario');
     expect(response.statusCode).toBe(200);
   });
-  test('Deberia responder con 200 al registro de usario', async () => {
+  test('Deberia responder con 200 al inicio de sesion de un  usario', async () => {
     const response = await request(app).get('/jardinBotanico/inicio-sesion');
     expect(response.statusCode).toBe(200);
+  });
+  test('Debería responder con 404 al obtener detalles de una planta específica por que esta eliminada', async () => {
+    const response = await request(app)
+    //Como eliminamos el id uno ya no deberia haber
+      .get('/jardinBotanico/detallesPlanta/1');
+    expect(response.statusCode).toBe(404);
+  });
+  test('Debería responder con 404 al obtener detalles de una planta específica por que no hay id', async () => {
+    const response = await request(app)
+    
+      .delete('/jardinBotanico/detallesPlanta/');
+    expect(response.statusCode).toBe(500);
   });
 });
