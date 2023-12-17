@@ -27,13 +27,14 @@ const Login = () => {
     // Realiza una solicitud para iniciar sesión
     axios.post('http://localhost:3000/jardinBotanico/inicio-sesion', formData)
       .then(response => {
-        console.log('Inicio de sesión exitoso:', response.data);
         navigate('/admin');
-
+        //message.success('Bienvenido Administrador', response.data)
+        
+        console.log('Usuario registrado exitosamente:', response.data)
        
       })
       .catch(error => {
-        message.error('Error al iniciar sesión', error);
+        //message.error('Error al iniciar sesión', error);
         // Limpiar los campos en caso de error
         setFormData({
           email: '',
@@ -47,8 +48,9 @@ const Login = () => {
     <div>
       <Header />
       <MenuNav />
-      <h1>Iniciar Sesión</h1>
       <div className='white-container'>
+      <h1>Iniciar Sesión</h1>
+
         <form className='registration-form' onSubmit={handleSubmit}>
           <label className="form-label">
             Email:

@@ -1,4 +1,17 @@
 /* MENU ITEM STYLING */
+.boton{
+  background-color: #124513; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  font-size: 16px; /* Tamaño del texto */
+  margin-left: 7cm;
+}
+.titulo{
+  margin: 0.4cm;
+}
 .planta-item {
   margin: 0px; /* Ajusta el margen según tus necesidades */
 }
@@ -41,10 +54,11 @@
 }
 
 .menuItem.customClass button {
-  margin-top: 10px; /* Ajusta el margen superior del botón según tus necesidades */
+  margin-top: 1px; /* Ajusta el margen superior del botón según tus necesidades */
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
+
 .menuItem:last-child {
   margin-right: 0; /* Elimina el espacio derecho para el último elemento */
 }

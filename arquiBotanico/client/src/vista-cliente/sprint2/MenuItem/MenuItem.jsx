@@ -9,12 +9,10 @@ function MenuItem({ product }) {
       <Card.Img src={`http://localhost:3000/${product.imagen}`} />
       <Card.Body>
         <hr />
-        <Card.Title>Titulo: {product.titulo}</Card.Title>
-        <Card.Text>
-          Descripcion: {product.descripcion.slice(0, 10)}...
-        </Card.Text>
+        <Card.Title className="titulo ">Titulo: {product.titulo}</Card.Title>
+        
         <Link to={`/mostrar-planta/page/${product.id}`}>
-          <button>Detalles</button>
+          <button className="boton">Ver Detalles</button>
         </Link>
       </Card.Body>
     </div>

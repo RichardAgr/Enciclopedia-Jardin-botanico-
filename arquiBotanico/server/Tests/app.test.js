@@ -25,5 +25,4 @@ describe('Test', () => {
         const response = await request(app).get('/Images/imagenInexistente.jpg');
         expect(response.statusCode).toBe(404);
       });
-
   });

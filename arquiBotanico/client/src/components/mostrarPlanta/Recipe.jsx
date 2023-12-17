@@ -6,6 +6,7 @@ import axios from 'axios';
 import '../sprint2/NavNavegacion/headerNav.css';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router'
+import './recipe.css'
 
 const Recipe = () => {
   const navigate = useNavigate();
@@ -67,7 +68,7 @@ const Recipe = () => {
               </Link>
             </div>
             {/* Agregar el componente de Eliminar aquí si es necesario */}
-            <Button className='buttonEliminar' type="danger" onClick={() => EliminarComponente(id)}>
+            <Button className='buttonEliminar ' type="danger" onClick={() => EliminarComponente(id)}>
               <DeleteOutlined />
               Eliminar
             </Button>

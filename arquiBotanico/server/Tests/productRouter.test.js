@@ -42,5 +42,12 @@ describe('Pruebas para las rutas de productos', () => {
 
     expect(response.statusCode).toBe(404);
   });
-
+  test('Deberia responder con 200 al registro de usario', async () => {
+    const response = await request(app).get('/jardinBotanico/agregar-usuario');
+    expect(response.statusCode).toBe(200);
+  });
+  test('Deberia responder con 200 al registro de usario', async () => {
+    const response = await request(app).get('/jardinBotanico/inicio-sesion');
+    expect(response.statusCode).toBe(200);
+  });
 });

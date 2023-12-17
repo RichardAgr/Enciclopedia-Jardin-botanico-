@@ -1,4 +1,7 @@
 /* Login.css */
+h1{
+  text-align: center;
+}
 .white-container {
   padding: 20px; /* Ajusta el relleno según tus necesidades */
 }

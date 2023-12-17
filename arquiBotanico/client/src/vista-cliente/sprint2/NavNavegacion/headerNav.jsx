@@ -16,7 +16,7 @@ const App2 = () => {
             <Menu theme="dark" mode="horizontal">
               <Menu.Item key="Home">
                 <Link to="/" className="menu-icon">
-                  <HomeOutlined /> Inicio
+                  <HomeOutlined /> jardin 
                 </Link>
               </Menu.Item>
             </Menu>

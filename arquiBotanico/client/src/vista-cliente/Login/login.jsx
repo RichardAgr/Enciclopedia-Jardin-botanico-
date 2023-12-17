@@ -31,13 +31,14 @@ const UserRegistration = () => {
     // Realiza una solicitud para registrar el nuevo usuario
     axios.post('http://localhost:3000/jardinBotanico/agregar-usuario', formData)
       .then(response => {
-        
         navigate('/');
+        message.success('Usuario Registrado Correctamente')
+        
         console.log('Usuario registrado exitosamente:', response.data);
         
       })
       .catch(error => {
-        console.log('Usuario registrado no exitosamente:', response.data);
+        console.log('Usuario registrado no exitosamente:', error.data);
       });
   };
 

@@ -1,4 +1,17 @@
 /* MENU ITEM STYLING */
+.boton{
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  font-size: 16px; /* Tamaño del texto */
+  margin-left: 2.5cm;
+}
+.titulo{
+  margin: 0.4cm;
+}
 .planta-item {
   margin: 0px; /* Ajusta el margen según tus necesidades */
 }

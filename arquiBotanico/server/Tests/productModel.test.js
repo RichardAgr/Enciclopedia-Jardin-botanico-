@@ -61,7 +61,6 @@ describe('Pruebas para el modelo de Productos', () => {
       descripcion: 'Descripción del producto de prueba',
     };
   
-    // Debería fallar al intentar crear un producto sin título
     await expect(Product.create(datosProductoInvalido)).rejects.toThrow();
   });
   test('debería encontrar productos por descripción', async () => {
