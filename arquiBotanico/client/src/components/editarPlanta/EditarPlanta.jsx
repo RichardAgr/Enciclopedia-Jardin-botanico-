@@ -33,7 +33,7 @@ const EditProduct = () => {
         }
 
         await axios.put(`http://localhost:3000/jardinBotanico/${id}`,data);
-        navigate('/admin');
+        navigate(`/admin/mostrar-planta/page/${id}`);
 
    }
 
@@ -44,13 +44,13 @@ const EditProduct = () => {
           <Header/>
           <MenuNav/>
           <Container className='mt-5 p-2'>
-                <h1>Editar Producto</h1>
+                <h1>Editar Planta</h1>
               
 
                 <Form className='registration-form' onSubmit={updateHandler}>
                     <Form.Group className="form-input" controlId="titulo">
                         <Form.Label>Titulo</Form.Label>
-                        <Form.Control
+                        <Form.Control className='titulo'
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                             type="text"
@@ -59,7 +59,7 @@ const EditProduct = () => {
 
                     <Form.Group className="form-input" controlId="descripcion">
                         <Form.Label>Descripcion</Form.Label>
-                        <Form.Control
+                        <Form.Control className='descripcion'
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             as="textarea"
@@ -69,7 +69,7 @@ const EditProduct = () => {
 
 
                     <Button variant="primary" type="submit" className='form-button'>
-                        Update Product
+                        Actualizar Planta
                     </Button>
                 </Form>
             </Container>
